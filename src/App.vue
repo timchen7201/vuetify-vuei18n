@@ -7,9 +7,11 @@
           <v-col class="mb-4">
             <h2 class="display-2 font-weight-bold mb-3">
               {{ $t('welcomeUser', {name: 'tim'}) }}
-              <v-calendar />
-
             </h2>
+            <h2>{{ $t('Calender')}}</h2>
+            <v-calendar />
+            <h2>{{ $t('DataTable')}}</h2>
+            <v-data-table  />
           </v-col>
         </v-row>
       </v-container>
