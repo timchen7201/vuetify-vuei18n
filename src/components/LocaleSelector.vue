@@ -38,6 +38,7 @@ export default {
   },
   created() {
     this.current = this.langs.findIndex(e => e == this.$i18n.locale)
+    console.log("==",this.current)
     if (this.current == -1) this.current = 0
   },
 }

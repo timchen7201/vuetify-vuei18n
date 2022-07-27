@@ -3,16 +3,10 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
-import zhHans from 'vuetify/lib/locale/zh-Hans'
+import zhHant from 'vuetify/lib/locale/zh-Hant'
 import en from 'vuetify/lib/locale/en'
 import fr from 'vuetify/es5/locale/fr'
-console.log("en",en)
-console.log("zhHans",zhHans)
-// const locales = {
-//     en: require('vuetify/es5/locale/en'),
-//     fr: require('vuetify/es5/locale/fr'),
-//     zh: require('vuetify/lib/locale/zh-Hans'),
-//   }
+
 
 Vue.use(Vuetify)
 
@@ -21,13 +15,14 @@ Vue.use(Vuetify)
 // const lang = localStorage.getItem('language') || 'tw'
 // console.log("--",lang)
 
-const current = navigator.language.split('-')[0]
-
+let current = navigator.language.split('-')[0]
+current = current == 'zh'?'zhHant':current
+console.log("current",current)
 
 export default new Vuetify({
     lang: {
         locales: { 
-            zhHans, 
+            zhHant, 
             en, 
             fr 
         },

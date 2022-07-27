@@ -5,6 +5,7 @@ import { messages } from '../lang'
 Vue.use(VueI18n)
 
 let locale = navigator.language.split('-')[0]
+locale = locale == 'zh'?'zhHant':locale
 
 export default new VueI18n({
   fallbackLocale: 'en',
