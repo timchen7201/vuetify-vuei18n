@@ -10,12 +10,8 @@ import fr from 'vuetify/es5/locale/fr'
 
 Vue.use(Vuetify)
 
-
-
-// const lang = localStorage.getItem('language') || 'tw'
-// console.log("--",lang)
-
 let current = navigator.language.split('-')[0]
+// zh 不統一所以強制訂為 zhHants
 current = current == 'zh'?'zhHant':current
 console.log("current",current)
 

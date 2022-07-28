@@ -5,11 +5,12 @@
 
  const files = require.context('.', false, /\.js$/)
  const messages = {}
- 
+ // 將 file 的名稱設為 key
  files.keys().forEach(key => {
    if (key === './index.js') return
    messages[key.replace(/(\.\/|\.js)/g, '')] = files(key).default
  })
+ 
  
  const languages = Object.keys(messages)
  

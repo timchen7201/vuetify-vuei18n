@@ -30,6 +30,8 @@ export default {
     }
   },
   methods: {
+    // 更換語言，lang 為 en, zhHants, fr...
+    // current 為 index
     changeLang(lang, i) {
       this.$i18n.locale = lang
       this.$vuetify.lang.current = lang
@@ -37,6 +39,7 @@ export default {
     }
   },
   created() {
+    // 根據現在的語言設定右上角國旗的 default
     this.current = this.langs.findIndex(e => e == this.$i18n.locale)
     console.log("==",this.current)
     if (this.current == -1) this.current = 0
